@@ -382,10 +382,4 @@ model_waypoint_trait.go
 model_waypoint_trait_symbol.go
 model_waypoint_type.go
 response.go
-test/api_agents_test.go
-test/api_contracts_test.go
-test/api_default_test.go
-test/api_factions_test.go
-test/api_fleet_test.go
-test/api_systems_test.go
 utils.go
