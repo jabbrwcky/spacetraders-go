@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
+	openapiclient "github.com/jabbrwcky/spacetraders-go"
 )
 
 func Test_spacetraders_FleetAPIService(t *testing.T) {
@@ -181,6 +181,34 @@ func Test_spacetraders_FleetAPIService(t *testing.T) {
 		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.FleetAPI.GetMyShips(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test FleetAPIService GetRepairShip", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var shipSymbol string
+
+		resp, httpRes, err := apiClient.FleetAPI.GetRepairShip(context.Background(), shipSymbol).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test FleetAPIService GetScrapShip", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var shipSymbol string
+
+		resp, httpRes, err := apiClient.FleetAPI.GetScrapShip(context.Background(), shipSymbol).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)
@@ -361,6 +389,34 @@ func Test_spacetraders_FleetAPIService(t *testing.T) {
 		var shipSymbol string
 
 		resp, httpRes, err := apiClient.FleetAPI.RemoveMount(context.Background(), shipSymbol).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test FleetAPIService RepairShip", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var shipSymbol string
+
+		resp, httpRes, err := apiClient.FleetAPI.RepairShip(context.Background(), shipSymbol).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
+	t.Run("Test FleetAPIService ScrapShip", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		var shipSymbol string
+
+		resp, httpRes, err := apiClient.FleetAPI.ScrapShip(context.Background(), shipSymbol).Execute()
 
 		require.Nil(t, err)
 		require.NotNil(t, resp)

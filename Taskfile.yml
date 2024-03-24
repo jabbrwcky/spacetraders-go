@@ -11,3 +11,5 @@ tasks:
         --api-package pkg 
         --model-package model
         -p enumClassPrefix=true
+        --git-repo-id spacetraders-go
+        --git-user-id jabbrwcky

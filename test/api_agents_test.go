@@ -11,11 +11,10 @@ package spacetraders
 
 import (
 	"context"
-	"testing"
-
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"testing"
+	openapiclient "github.com/jabbrwcky/spacetraders-go"
 )
 
 func Test_spacetraders_AgentsAPIService(t *testing.T) {
@@ -25,7 +24,7 @@ func Test_spacetraders_AgentsAPIService(t *testing.T) {
 
 	t.Run("Test AgentsAPIService GetAgent", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		var agentSymbol string
 
@@ -39,7 +38,7 @@ func Test_spacetraders_AgentsAPIService(t *testing.T) {
 
 	t.Run("Test AgentsAPIService GetAgents", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AgentsAPI.GetAgents(context.Background()).Execute()
 
@@ -51,7 +50,7 @@ func Test_spacetraders_AgentsAPIService(t *testing.T) {
 
 	t.Run("Test AgentsAPIService GetMyAgent", func(t *testing.T) {
 
-		t.Skip("skip test") // remove to run test
+		t.Skip("skip test")  // remove to run test
 
 		resp, httpRes, err := apiClient.AgentsAPI.GetMyAgent(context.Background()).Execute()
 
