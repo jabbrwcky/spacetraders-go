@@ -1,0 +1,13 @@
+version: "3"
+
+tasks:
+  gen:
+    cmds:
+      - >-
+        openapi-generator generate 
+        -i 'https://stoplight.io/api/v1/projects/spacetraders/spacetraders/nodes/reference/SpaceTraders.json?fromExportButton=true&snapshotType=http_service&deref=optimizedBundle' 
+        -g go
+        -p packageName=spacetraders
+        --api-package pkg 
+        --model-package model
+        -p enumClassPrefix=true
